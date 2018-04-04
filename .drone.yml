@@ -15,4 +15,4 @@ pipeline:
     image: plugins/slack
     chanel: mickeyparade
     webhook: <slack_webhook>
-    secret: [slack_webhook]
+    secret: [ slack_webhook ]
