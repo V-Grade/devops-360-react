@@ -13,6 +13,6 @@ pipeline:
 
   notify:
     image: plugins/slack
-    chanel: mickeyparade
     webhook: <slack_webhook>
+    chanel: mickeyparade
     secret: [ slack_webhook ]
