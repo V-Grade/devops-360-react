@@ -16,3 +16,22 @@ pipeline:
     webhook: <slack_webhook>
     chanel: mickeyparade
     secrets: [ slack_webhook ]
+
+
+  pre-release:
+    image: node:alpine
+    commands:
+     - yarn build
+     - tar -zcvf build.tar.gz -C build .
+    when:
+      event: tag
+
+  release:
+    image: plugins/github-release
+    api_key: <>
+    files: build.tar.gz
+    when:
+      event: tag
+    secrets: [github_token]
+=======
+
