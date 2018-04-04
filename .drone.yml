@@ -13,5 +13,6 @@ pipeline:
 
   notify:
     image: plugins/slack
-    chanel: drone
-    webhook: https://hooks.slack.com/services/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
+    chanel: mickeyparade
+    webhook: <slack_webhook>
+    secret: [slack_webhook]
